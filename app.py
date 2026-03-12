@@ -10,7 +10,7 @@ setup.setup()
 # ── load generator ────────────────────────────────────────────
 spec = importlib.util.spec_from_file_location(
     "generator",
-    "code/generator.py"
+    "generator.py"
 )
 generator_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(generator_module)
@@ -217,4 +217,5 @@ if ask and question.strip():
         "question": question,
         "answer"  : answer
     })
+
     st.rerun()
