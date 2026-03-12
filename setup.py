@@ -3,7 +3,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "code"))
+sys.path.insert(0, os.path.dirname(__file__))
 
 from loader import load_pdfs
 from chunker import chunk_documents
@@ -21,4 +21,5 @@ def setup():
     docs   = load_pdfs(DATA_FOLDER)
     chunks = chunk_documents(docs)
     embed_and_store(chunks)
+
     print("✅ DB ready!")
