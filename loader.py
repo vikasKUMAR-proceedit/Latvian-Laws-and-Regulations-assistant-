@@ -3,7 +3,7 @@
 import fitz
 import os
 
-DATA_FOLDER = "data"
+DATA_FOLDER = "."
 
 def load_pdfs(data_folder=DATA_FOLDER):
     documents = []
@@ -36,4 +36,5 @@ def load_pdfs(data_folder=DATA_FOLDER):
         print(f"   ✅ Done\n")
 
     print(f"✅ Total pages loaded: {len(documents)}")
+
     return documents
