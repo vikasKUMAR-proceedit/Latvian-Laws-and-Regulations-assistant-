@@ -11,7 +11,7 @@ from loader import load_pdfs
 from chunker import chunk_documents
 
 DB_FOLDER   = "db"
-DATA_FOLDER = "data"
+DATA_FOLDER = "."
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
@@ -40,4 +40,5 @@ def embed_and_store(chunks):
     )
 
     print(f"\n✅ Stored {len(chunks)} chunks in ChromaDB!")
+
     return collection
