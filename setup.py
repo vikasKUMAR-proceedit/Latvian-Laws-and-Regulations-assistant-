@@ -10,7 +10,7 @@ from chunker import chunk_documents
 from embedder import embed_and_store
 
 DB_FOLDER   = "db"
-DATA_FOLDER = "data"
+DATA_FOLDER = "."
 
 def setup():
     if os.path.exists(DB_FOLDER) and len(os.listdir(DB_FOLDER)) > 0:
@@ -23,3 +23,4 @@ def setup():
     embed_and_store(chunks)
 
     print("✅ DB ready!")
+
