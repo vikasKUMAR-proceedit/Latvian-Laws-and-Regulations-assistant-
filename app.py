@@ -18,7 +18,7 @@ generate_answer = generator_module.generate_answer
 
 # ── page config ───────────────────────────────────────────────
 st.set_page_config(
-    page_title="Latvian Laws Assistant",
+    page_title="Latvian Laws Assistant & Regulations Assistant",
     page_icon="⚖️",
     layout="centered"
 )
