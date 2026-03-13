@@ -1,5 +1,9 @@
 streamlit
 groq
 chromadb
-pymupdf
 sentence-transformers
+pymupdf
+torch
+transformers
+huggingface-hub
+numpy
