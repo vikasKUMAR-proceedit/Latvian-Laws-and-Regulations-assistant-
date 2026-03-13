@@ -156,7 +156,7 @@ if "history" not in st.session_state:
 # ── header ────────────────────────────────────────────────────
 st.markdown("""
 <div class="app-header">
-    <h1 class="app-title">⚖️ Latvian Laws Assistant</h1>
+    <h1 class="app-title">⚖️ Latvian Laws & Regulations Assistant</h1>
     <p class="app-subtitle">Powered by local AI — no data leaves your machine</p>
 </div>
 <hr class="custom-divider">
