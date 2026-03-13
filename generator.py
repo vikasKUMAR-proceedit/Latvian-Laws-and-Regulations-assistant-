@@ -3,6 +3,7 @@
 import sys
 import os
 import importlib.util
+import streamlit as st
 
 spec = importlib.util.spec_from_file_location(
     "retriever",
@@ -14,7 +15,7 @@ retrieve = retriever_module.retrieve
 
 from groq import Groq
 
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", ""))
 client = Groq(api_key=GROQ_API_KEY)
 
 GREETINGS = ["hi", "hello", "hey", "how are you", "what are you",
