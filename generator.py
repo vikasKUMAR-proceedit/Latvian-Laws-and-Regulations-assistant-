@@ -15,7 +15,19 @@ retrieve = retriever_module.retrieve
 
 from groq import Groq
 
-GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", ""))
+# Try Streamlit secrets first, then environment variable
+GROQ_API_KEY = ""
+try:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except Exception:
+    GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+
+if not GROQ_API_KEY:
+    raise ValueError(
+        "GROQ_API_KEY not found! "
+        "Please set it in Streamlit Cloud secrets or as an environment variable."
+    )
+
 client = Groq(api_key=GROQ_API_KEY)
 
 GREETINGS = ["hi", "hello", "hey", "how are you", "what are you",
